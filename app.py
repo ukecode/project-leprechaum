@@ -56,6 +56,7 @@ def main():
     # Start the Bot
     updater.start_polling()
 
+    PORT = config('PORT')
     updater.start_webhook(listen="0.0.0.0",
                           port=int(PORT),
                           url_path=TOKEN)
